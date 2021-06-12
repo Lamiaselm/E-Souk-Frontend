@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
+
 
 export default function Login_Form() {
     const [email, setEmail] = useState("");
@@ -20,7 +17,9 @@ export default function Login_Form() {
     event.preventDefault();
   }
     return (
-      
+      <div className="login-container">
+
+     
         <div className="Login">
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
@@ -44,6 +43,7 @@ export default function Login_Form() {
             Login
           </Button>
         </Form>
+      </div>
       </div>
         
     )
