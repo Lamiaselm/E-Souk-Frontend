@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-
+import  logo from "./Assets/e-souk-logo.png"
 
 export default function Login_Form() {
     const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ export default function Login_Form() {
     return (
       <div className="login-container">
 
-     
+       <img className="logo" src={logo}/>
         <div className="Login">
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
