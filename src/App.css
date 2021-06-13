@@ -105,6 +105,9 @@
 .btn-outline-warning:hover{
   color: white !important;
 }
+.btn-warning{
+  color: white !important;
+}
 .order-btn:hover{
   background-color:#716B96 !important;
   border-color:#716B96 !important;

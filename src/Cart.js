@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import imprimante from "./Assets/canon-imprimante-pixma-ts3350-multifonction-jet-d.jpeg";
+import dell from "./Assets/dell.jpg";
 import f1 from "./Assets/Robe-habillee-fille-marine-ROFEFI005-big.jpeg";
 
 export default function Cart() {
@@ -31,10 +31,10 @@ export default function Cart() {
               <td style={{ display: "flex" }}>
                 <img
                   className="cart-img"
-                  src={imprimante}
+                  src={dell}
                   style={{ width: "11%", marginRight: "40px" }}
                 />
-                Imprimante Canon Pixma MG2540s Noir <br /> Some discription abt
+                Dell Inspiron I5, 8GB RAM, 1TB SSD <br /> Some discription abt
                 this cute imprimante
               </td>
 
@@ -45,7 +45,7 @@ export default function Cart() {
                   </Form.Group>
                 </Form>
               </td>
-              <td>7000DA</td>
+              <td>14000DA</td>
               <td>14000DA</td>
             </tr>
             <tr>
