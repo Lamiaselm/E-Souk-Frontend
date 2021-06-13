@@ -5,7 +5,6 @@ import Card from "react-bootstrap/Card";
 import { useHistory } from "react-router-dom";
 import imprimante from "./Assets/canon-imprimante-pixma-ts3350-multifonction-jet-d.jpeg";
 import mac from "./Assets/macbook-pro-2017.jpeg";
-import baffe from "./Assets/9179UILdcKL._AC_SS450_.jpg";
 import mouse from "./Assets/41VkzplsASL._SL500_.jpg";
 import f1 from "./Assets/Robe-habillee-fille-marine-ROFEFI005-big.jpeg";
 import f2 from "./Assets/ec092d1c550231d2be6c03330d946832.jpeg";
