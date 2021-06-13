@@ -102,3 +102,14 @@
   border: 2px solid #716B96;
   border-radius: 5px;
 }
+.btn-outline-warning:hover{
+  color: white !important;
+}
+.order-btn:hover{
+  background-color:#716B96 !important;
+  border-color:#716B96 !important;
+}
+.order-btn{
+  color:#716B96 !important;
+  border-color:#716B96 !important;
+}
