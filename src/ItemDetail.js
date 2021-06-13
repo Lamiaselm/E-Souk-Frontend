@@ -6,12 +6,23 @@ import Container from "react-bootstrap/Container";
 import dell from "./Assets/dell.jpg";
 import Button from "react-bootstrap/Button";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 
 export default function ItemDetail() {
+  const [joke, setJoke] = useState("");
   const history = useHistory();
   function handleClick() {
     history.push("/cart");
   }
+  const getJoke = () => {
+    axios
+      .get("https://official-joke-api.appspot.com/random_joke")
+      .then((response) => {
+        console.log(response);
+        setJoke(response.data.setup);
+      });
+  };
 
   return (
     <div>
@@ -26,7 +37,7 @@ export default function ItemDetail() {
           <Col xs md="5" style={{ textAlign: "justify" }}>
             <h2>Dell Inspiron</h2>
             <h4 style={{ color: "#a1a1a1" }}>I5, 8GB RAM, 1TB SSD </h4>
-            <h3>50000 DA</h3>
+            <h3>{joke}</h3>
             <p>
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
@@ -41,7 +52,7 @@ export default function ItemDetail() {
               variant="outline-warning"
               size="lg"
               className="order-btn"
-              //   onClick={handleClick}
+              onClick={getJoke}
             >
               Click here to Order
             </Button>
