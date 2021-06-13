@@ -3,19 +3,24 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { useHistory } from "react-router-dom";
 import logo from "./Assets/e-souk-logo.png";
 
 export default function Login_Form() {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  function handleClick() {
+    history.push("/home");
+  }
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
-
   function handleSubmit(event) {
     event.preventDefault();
   }
+
   return (
     <div className="login-container">
       <img className="logo" src={logo} />
@@ -44,6 +49,7 @@ export default function Login_Form() {
             size="lg"
             type="submit"
             disabled={!validateForm()}
+            onClick={handleClick}
           >
             Login
           </Button>
