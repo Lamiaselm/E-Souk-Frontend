@@ -2,7 +2,8 @@ import React from "react";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import logo from "./Assets/e-souk-logo.png";
 import Button from "react-bootstrap/Button";
-import cart from "./Assets/shopping-cart.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar() {
   return (
@@ -16,11 +17,10 @@ export default function NavBar() {
           <Nav>
             <Button className="nav-button" variant="outline-warning">
               Login
-            </Button>{" "}
+            </Button>
             <Button variant="warning">
-              {" "}
-              <i class="fas fa-shopping-cart"></i>My Cart
-            </Button>{" "}
+              <FontAwesomeIcon icon={faShoppingCart} /> &nbsp; My Cart
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
