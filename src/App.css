@@ -92,3 +92,9 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border-color: #ffc107;
 }
+.cart-container{
+  width: 75%;
+  margin: auto;
+  margin-top: 106px;
+  background-color: #f5f5f5;
+}
