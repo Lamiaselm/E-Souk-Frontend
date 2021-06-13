@@ -90,7 +90,7 @@
 }
 .card:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  border-color: #ffc107;
+  border-color: #716B96;
 }
 .cart-container{
   width: 75%;
@@ -110,10 +110,6 @@
   background-color:#716B96 !important;
   border-color:#716B96 !important;
 }
-.btn-outline-dark{
-  color:#716B96 !important;
-  border-color:#716B96 !important;
-}
 .btn-warning{
   color: white !important;
 }
@@ -121,7 +117,12 @@
   background-color:#716B96 !important;
   border-color:#716B96 !important;
 }
-.order-btn{
-  color:#716B96 !important;
+.btn-warning.home{
+  color: white !important;
+  background-color:#716B96 !important;
   border-color:#716B96 !important;
 }
+.btn-outline-dark{
+  color:#716B96 !important;
+  border-color:#716B96 !important;
+  }

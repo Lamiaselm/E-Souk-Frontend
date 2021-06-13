@@ -27,7 +27,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>
           </Card.Body>
         </Card>
         <Card className="card">
@@ -38,7 +41,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>
           </Card.Body>
         </Card>
         <Card className="card">
@@ -49,7 +55,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>{" "}
           </Card.Body>
         </Card>
         <Card className="card">
@@ -60,7 +69,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>{" "}
           </Card.Body>
         </Card>
       </div>
@@ -76,7 +88,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>{" "}
           </Card.Body>
         </Card>
         <Card className="card">
@@ -87,7 +102,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>{" "}
           </Card.Body>
         </Card>
         <Card className="card">
@@ -98,7 +116,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>{" "}
           </Card.Body>
         </Card>
         <Card className="card">
@@ -109,7 +130,10 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="warning">Detail</Button>
+            <Button variant="outline-dark" style={{ marginRight: "20px" }}>
+              Detail
+            </Button>
+            <Button variant="warning home">Order product</Button>{" "}
           </Card.Body>
         </Card>
       </div>
