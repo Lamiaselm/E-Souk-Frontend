@@ -1,7 +1,11 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import NavBar from "./NavBar";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 import imprimante from "./Assets/canon-imprimante-pixma-ts3350-multifonction-jet-d.jpeg";
 import f1 from "./Assets/Robe-habillee-fille-marine-ROFEFI005-big.jpeg";
 
@@ -63,12 +67,31 @@ export default function Cart() {
                   </Form.Group>
                 </Form>
               </td>
-              <td>7000DA</td>
-              <td>14000DA</td>
+              <td>3000DA</td>
+              <td>3000DA</td>
             </tr>
           </tbody>
         </Table>
       </div>
+      <Container>
+        <Row className="justify-content-md-end">
+          <Col xs lg="2" style={{ fontSize: "20px" }}>
+            <b>TOTAL :</b>
+          </Col>
+          <Col xs lg="2" style={{ color: "#ffc107", fontSize: "20px" }}>
+            <b>17000DA</b>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="justify-content-md-center">
+          <Col>
+            <Button variant="outline-warning" size="lg">
+              Click here to Pay
+            </Button>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
