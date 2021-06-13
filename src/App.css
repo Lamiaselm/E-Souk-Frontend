@@ -64,8 +64,11 @@
   margin-left: 18px;
 }
 .logo-nav{
-  width: 183px;
+  width: 130px;
 }
 .me-auto{
   float: right;
+}
+.nav-button{
+  margin-right: 20px;
 }
