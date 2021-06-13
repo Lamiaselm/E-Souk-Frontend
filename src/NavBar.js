@@ -17,7 +17,7 @@ export default function NavBar() {
         <Form className="d-flex">
           <FormControl
             style={{ width: "500px" }}
-            type="search"
+            type="search for product"
             placeholder="Search"
             className="mr-2"
             aria-label="Search"

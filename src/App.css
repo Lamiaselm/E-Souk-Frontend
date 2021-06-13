@@ -105,6 +105,15 @@
 .btn-outline-warning:hover{
   color: white !important;
 }
+.btn-outline-dark:hover{
+  color: white !important;
+  background-color:#716B96 !important;
+  border-color:#716B96 !important;
+}
+.btn-outline-dark{
+  color:#716B96 !important;
+  border-color:#716B96 !important;
+}
 .btn-warning{
   color: white !important;
 }
