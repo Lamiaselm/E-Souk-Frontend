@@ -3,6 +3,7 @@ import Login_Form from "./Login_Form";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import Cart from "./Cart";
+import ItemDetail from "./ItemDetail";
 function App() {
   return (
     <Router>
@@ -10,6 +11,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login_Form} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/ItemDetail" component={ItemDetail} />
       </div>
     </Router>
   );
