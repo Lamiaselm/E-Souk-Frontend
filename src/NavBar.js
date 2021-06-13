@@ -16,7 +16,7 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Form className="d-flex">
           <FormControl
-            style={{ width: "300px" }}
+            style={{ width: "500px" }}
             type="search"
             placeholder="Search"
             className="mr-2"
