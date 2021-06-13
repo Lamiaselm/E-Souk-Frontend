@@ -26,16 +26,15 @@ export default function Cart() {
           </thead>
           <tr></tr>
           <tbody>
-            <tr style={{ backgroundColor: "none" }}>
+            <tr style={{ backgroundColor: "#f5f5f5" }}>
               <td>1</td>
-              <td style={{ display: "flex" }}>
+              <td style={{ textAlign: "left" }}>
                 <img
                   className="cart-img"
                   src={dell}
                   style={{ width: "11%", marginRight: "40px" }}
                 />
-                Dell Inspiron I5, 8GB RAM, 1TB SSD <br /> Some discription abt
-                this cute imprimante
+                Dell Inspiron I5, 8GB RAM, 1TB SSD
               </td>
 
               <td>
@@ -50,14 +49,13 @@ export default function Cart() {
             </tr>
             <tr>
               <td>2</td>
-              <td style={{ display: "flex" }}>
+              <td style={{ textAlign: "left" }}>
                 <img
                   className="cart-img"
                   src={f1}
                   style={{ width: "11%", marginRight: "40px" }}
                 />
-                Robe fiellete bleu marine <br /> Some discription abt this cute
-                dress
+                Robe fiellete bleu marine
               </td>
 
               <td>

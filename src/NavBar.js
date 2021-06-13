@@ -4,8 +4,13 @@ import logo from "./Assets/e-souk-logo.png";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 export default function NavBar() {
+  const history = useHistory();
+  function handleClick() {
+    history.push("/cart");
+  }
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
       <Container>
@@ -29,7 +34,7 @@ export default function NavBar() {
             <Button className="nav-button" variant="outline-warning">
               Login
             </Button>
-            <Button variant="warning">
+            <Button variant="warning" onClick={handleClick}>
               <FontAwesomeIcon icon={faShoppingCart} /> &nbsp; My Cart
             </Button>
           </Nav>

@@ -5,8 +5,14 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import dell from "./Assets/dell.jpg";
 import Button from "react-bootstrap/Button";
+import { useHistory } from "react-router-dom";
 
 export default function ItemDetail() {
+  const history = useHistory();
+  function handleClick() {
+    history.push("/cart");
+  }
+
   return (
     <div>
       <NavBar />
@@ -30,9 +36,13 @@ export default function ItemDetail() {
             <p>
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
-              signification utilisée à titre provisoire pour calibrer une mise
             </p>
-            <Button variant="outline-warning" size="lg" className="order-btn">
+            <Button
+              variant="outline-warning"
+              size="lg"
+              className="order-btn"
+              //   onClick={handleClick}
+            >
               Click here to Order
             </Button>
           </Col>

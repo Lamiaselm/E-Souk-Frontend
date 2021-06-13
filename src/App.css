@@ -113,6 +113,10 @@
 .btn-warning{
   color: white !important;
 }
+.order-btn{
+  color:#716B96 !important;
+  border-color:#716B96 !important;
+}
 .order-btn:hover{
   background-color:#716B96 !important;
   border-color:#716B96 !important;
