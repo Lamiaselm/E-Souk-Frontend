@@ -73,9 +73,16 @@
   margin-right: 20px;
 }
 .card-container{
-  margin: 10px 134px ;
+  margin: 10px 45px ;
   padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .category{
   margin:60px 20px 0px 0px;
+}
+.card{
+  align-items: center;
+  width: 18rem;
+  margin: 20px;
 }
