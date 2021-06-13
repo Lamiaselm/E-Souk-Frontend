@@ -7,7 +7,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="dark" fixed="top">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
           <img className="logo-nav" src={logo} />
