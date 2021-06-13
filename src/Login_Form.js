@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
-import  logo from "./Assets/e-souk-logo.png"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import logo from "./Assets/e-souk-logo.png";
 
 export default function Login_Form() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -16,14 +16,13 @@ export default function Login_Form() {
   function handleSubmit(event) {
     event.preventDefault();
   }
-    return (
-      <div className="login-container">
-
-       <img className="logo" src={logo}/>
-        <div className="Login">
+  return (
+    <div className="login-container">
+      <img className="logo" src={logo} />
+      <div className="Login">
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
-            <Form.Label>Email</Form.Label>
+            <Form.Label style={{ float: "left" }}>Email</Form.Label>
             <Form.Control
               autoFocus
               type="email"
@@ -32,19 +31,24 @@ export default function Login_Form() {
             />
           </Form.Group>
           <Form.Group size="lg" controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label style={{ float: "left" }}>Password</Form.Label>
             <Form.Control
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          <Button block size="lg" type="submit" disabled={!validateForm()}>
+          <Button
+            variant="warning"
+            block
+            size="lg"
+            type="submit"
+            disabled={!validateForm()}
+          >
             Login
           </Button>
         </Form>
       </div>
-      </div>
-        
-    )
+    </div>
+  );
 }
