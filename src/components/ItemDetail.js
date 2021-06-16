@@ -3,11 +3,12 @@ import NavBar from "./NavBar";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import dell from "./Assets/dell.jpg";
 import Button from "react-bootstrap/Button";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+
+const  dell = "/dell.jpg";
 
 export default function ItemDetail() {
   const [joke, setJoke] = useState("");
