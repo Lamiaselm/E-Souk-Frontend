@@ -5,10 +5,13 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const ArticleCard = props => {
+
     const history = useHistory();
+
     function handleClick() {
         history.push(`/detail/${props.id}`);
     }
+
     return (
         <Card className="card">
             <Card.Img
@@ -26,9 +29,8 @@ const ArticleCard = props => {
                 style={{ marginRight: "20px" }}
                 onClick={handleClick}
                 >
-                Detail
+                See all Detail
                 </Button>
-                <Button variant="warning home">Order product</Button>
             </Card.Body>
         </Card>
     )

@@ -4,26 +4,43 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
-import { useState } from "react";
-
-const  dell = "/dell.jpg";
+import { useHistory, useParams } from "react-router-dom";
+import {api} from "../scripts/api"
+import { useState , useEffect } from "react";
+import { getUserId } from "../scripts/localStorageManager"
 
 export default function ItemDetail() {
-  const [joke, setJoke] = useState("");
+
+  const [article, setarticle] = useState({})
+  const { id } = useParams()
+
+  const userid = getUserId() ;
+
   const history = useHistory();
-  function handleClick() {
-    history.push("/cart");
+
+  const addToBasket = () => {
+    if (userid)
+      api.put(`panier/${userid}/add`,{ articleid : id})
+      .then( res => { 
+        setarticle(res.data)
+        history.push("/cart");
+      })
+      .catch( err => console.log(err))
+    else
+      history.push("/login");
   }
-  const getJoke = () => {
-    axios
-      .get("https://official-joke-api.appspot.com/random_joke")
-      .then((response) => {
-        console.log(response);
-        setJoke(response.data.setup);
-      });
+
+  const Order= () => {
+    history.push("/cart");
   };
+
+  useEffect(() => {
+    api.get(`article/${id}`)
+    .then( res => { 
+      setarticle(res.data)
+    })
+    .catch( err => console.log(err))
+  }, [])
 
   return (
     <div>
@@ -32,30 +49,34 @@ export default function ItemDetail() {
         <Row className="justify-content-md-center">
           <Col xs md="6">
             <div className="detail-img">
-              <img className="cart-img" src={dell} style={{ width: "530px" }} />
+              <img className="cart-img" src={article.imageurl} style={{ width: "530px" }} />
             </div>
           </Col>
           <Col xs md="5" style={{ textAlign: "justify" }}>
-            <h2>Dell Inspiron</h2>
-            <h4 style={{ color: "#a1a1a1" }}>I5, 8GB RAM, 1TB SSD </h4>
-            <h3>{joke}</h3>
+            <h2>{article.title}</h2>
             <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise{" "}
+              {article.description}
             </p>
             <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
+              <br/>
+              Type : {article.type}
+              <br/>
+              Prix : {article.prix}
+              <br/>
+              Disponible : {article.quantity}
             </p>
             <Button
-              variant="outline-warning"
-              size="lg"
-              className="order-btn"
-              onClick={getJoke}
+              variant="outline-dark"  
+              onClick={Order}
             >
               Click here to Order
+            </Button>
+            <br/>
+            <br/>
+            <Button
+              onClick={addToBasket}
+            >
+              Add to basket
             </Button>
           </Col>
         </Row>
