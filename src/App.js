@@ -1,6 +1,6 @@
 import "./App.css";
 import Login_Form from "./components/Login_Form";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import ItemDetail from "./components/ItemDetail";

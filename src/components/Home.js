@@ -4,6 +4,16 @@ import ArticleCard from "./ArticleCard";
 import { api } from "../scripts/api";
 
 export default function Home() {
+  useEffect(() => {
+    var token = localStorage.getItem("usertoken");
+    if (token) {
+      console.log(token);
+      this.props.history.push(`/home`);
+    } else {
+      this.props.history.push(`/login`);
+    }
+  });
+
   const [loaded, setloaded] = useState(false);
   const [articles, setarticles] = useState([]);
 
