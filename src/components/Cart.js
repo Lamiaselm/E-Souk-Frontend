@@ -6,8 +6,9 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import dell from "./Assets/dell.jpg";
-import f1 from "./Assets/Robe-habillee-fille-marine-ROFEFI005-big.jpeg";
+
+const dell = "/dell.jpg";
+const f1 = "/Robe-habillee-fille-marine-ROFEFI005-big.jpeg";
 
 export default function Cart() {
   return (
