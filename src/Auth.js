@@ -2,7 +2,7 @@ import axios from "axios";
 import { api } from "./scripts/api";
 
 export const login = async (user) => {
-  api
+  return api
     .post(
       "user/client/signin",
       {

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+
 import {
   Nav,
   Navbar,
@@ -12,27 +14,36 @@ import {
   NavbarBrand,
 } from "react-bootstrap";
 import { render } from "@testing-library/react";
-
 const logo = "/e-souk-logo.png";
-function LoginButton() {
-  return (
-    <Button className="nav-button" href="/login" variant="outline-warning">
-      Login
-    </Button>
-  );
-}
 
-function LogoutButton() {
-  return (
-    <Button className="nav-button" href="/login" variant="outline-warning">
-      Logout
-    </Button>
-  );
-}
+class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+  logOut(e) {
+    e.preventDefault();
+    localStorage.removeItem("usertoken");
+    this.props.history.push(`/login`);
+  }
 
-class NavBar extends React.Component {
   render() {
-    const token = localStorage.getItem("usertoken");
+    const LoginButton = (
+      <Button className="nav-button" href="/login" variant="outline-warning">
+        Login
+      </Button>
+    );
+
+    const LogoutButton = (
+      <Button
+        className="nav-button"
+        href="/login"
+        variant="outline-warning"
+        onClick={this.logOut.bind(this)}
+      >
+        Logout
+      </Button>
+    );
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
         <Container>
@@ -53,7 +64,7 @@ class NavBar extends React.Component {
           </Form>
           <Navbar.Collapse className="justify-content-end">
             <Nav>
-              {token ? LoginButton : LogoutButton}
+              {localStorage.userftoken ? LoginButton : LogoutButton}
               <Button variant="warning" href="/cart">
                 <FontAwesomeIcon icon={faShoppingCart} /> &nbsp; My Cart
               </Button>
@@ -64,4 +75,4 @@ class NavBar extends React.Component {
     );
   }
 }
-export default Navbar;
+export default withRouter(NavBar);

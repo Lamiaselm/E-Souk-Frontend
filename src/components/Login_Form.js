@@ -52,6 +52,7 @@ class Login_form extends Component {
     console.log(user);
 
     login(user).then((res) => {
+      console.log(res);
       if (res) {
         this.setState({
           loggedin: true,
