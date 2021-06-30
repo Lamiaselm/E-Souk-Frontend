@@ -1,18 +1,20 @@
 import axios from "axios";
+import { api } from "./scripts/api";
 
-export const login = (user) => {
-  return axios
+export const login = async (user) => {
+  api
     .post(
-      "user/signin",
+      "user/client/signin",
       {
-        email: user.email,
-        password: user.password,
+        num_telephone: user.num_telephone,
+        motDePasse: user.motDePasse,
       },
       {
         headers: { "Content-Type": "application/json" },
       }
     )
     .then((response) => {
+      console.log(response);
       localStorage.setItem("usertoken", response.data.token);
       console.log(localStorage.getItem("usertoken"));
       console.log(user);

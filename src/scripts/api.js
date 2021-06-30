@@ -1,7 +1,7 @@
 import Axios from "axios";
 import _ from "lodash";
 
-const API_HOST = "http://11cf81f9a492.ngrok.io/api"; // should be gateway addresse mba3da we update it
+const API_HOST = "http://d9acc90d3d63.ngrok.io/api"; // should be gateway addresse mba3da we update it
 
 export { API_HOST };
 

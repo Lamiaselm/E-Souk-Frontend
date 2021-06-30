@@ -17,7 +17,8 @@ export default function Home() {
       })
       .catch((err) => console.log(err));
   };
-
+  var token = localStorage.getItem("usertoken");
+  console.log(token);
   useEffect(() => chargeArticles(), []);
 
   return (

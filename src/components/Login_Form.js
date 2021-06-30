@@ -36,6 +36,7 @@ class Login_form extends Component {
   componentDidMount() {
     var token = localStorage.getItem("usertoken");
     if (token) {
+      console.log(token);
       this.props.history.push(`/home`);
     } else {
       this.props.history.push(`/login`);
@@ -48,6 +49,7 @@ class Login_form extends Component {
       num_telephone: this.state.num_telephone,
       motDePasse: this.state.motDePasse,
     };
+    console.log(user);
 
     login(user).then((res) => {
       if (res) {
@@ -71,7 +73,7 @@ class Login_form extends Component {
               <Form.Label style={{ float: "left" }}>Email</Form.Label>
               <Form.Control
                 autoFocus
-                type="email"
+                type="text"
                 name="num_telephone"
                 value={this.state.num_telephone}
                 onChange={this.onChange}
